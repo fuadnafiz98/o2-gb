@@ -651,7 +651,7 @@ export default function Home() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                   <span className="ml-3 ">
-                    Boosting your brand's presence and reputation across
+                    Boosting your brand’s presence and reputation across
                     widespread media platforms.
                   </span>
                 </li>
@@ -683,7 +683,7 @@ export default function Home() {
                   a unique pathway for the people of Bangladesh, to get involved
                   in the development of the country through philanthropy and
                   volunteering. GBF designs projects that identify and solve
-                  selected development challenges' root problems. By bringing
+                  selected development challenges root problems. By bringing
                   modern practices from the development industry to the more
                   simplistic philanthropic sector, the foundation strives to
                   ensure that charity contributions from individuals and
