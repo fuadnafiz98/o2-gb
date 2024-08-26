@@ -19,7 +19,7 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="flex flex-col-reverse items-center h-[512px] lg:flex-row lg:justify-between mx-16 lg:mx-24 xl:mx-32">
+      <div className="flex flex-col-reverse items-center h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="w-full font-sans text-xl md:text-3xl md:pr-12 text-justify h-full md:px-4">
           <strong>Shokto Kori Bangladesh</strong> - With this resolute motto,
           <strong>Project Oxygen 4.0</strong>, driven by the passion of the
@@ -38,7 +38,7 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-16 lg:mx-24 xl:mx-32">
+      <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="grid grid-cols-1 lg:grid-cols-2  h-full w-full">
           {/* 1 */}
           <div className="h-full w-full lg:border-r-4 border-b-4 border-emerald-700 lg:pr-8 py-8">
@@ -99,10 +99,10 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="min-h-[512px] w-full bg-emerald-700 p-24">
-        <div className="bg-white rounded-lg px-4">
+      <div className="py-24 w-full bg-emerald-700 p-4 lg:px-32">
+        <div className="bg-white rounded-lg px-4 w-full">
           <section className="text-gray-700 font-sans">
-            <div className="container px-5 py-24 mx-auto flex flex-col">
+            <div className="container px-5 py-12 mx-auto flex flex-col">
               <div className="flex flex-wrap w-full">
                 <div className="lg:w-2/5">
                   <div className="flex relative pb-12">
@@ -418,7 +418,7 @@ export default function Home() {
         </h2>
       </div>
       <div>
-        <section className="bg-gradient-to-r to-emerald-500 from-lime-600 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center">
+        <section className="bg-gradient-to-r to-emerald-500 pb-12 from-lime-600 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center">
           <div className="w-full">
             <h3 className="text-center text-2xl font-bold font-sarif">....</h3>
             <div className="container px-8 py-8 mx-auto w-full">
