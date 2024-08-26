@@ -231,7 +231,7 @@ export default function Home() {
       </div>
 
       <div>
-        <section className="leaf-pattern flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center">
+        <section className="leaf-pattern flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center md:px-16 lg:px-32">
           <div className="w-full">
             <h3 className="text-center text-2xl font-bold font-sarif">
               Climate Graduation Program
@@ -418,7 +418,7 @@ export default function Home() {
         </h2>
       </div>
       <div>
-        <section className="bg-gradient-to-r to-emerald-500 pb-12 from-lime-600 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center">
+        <section className="bg-gradient-to-r from-emerald-500 to-emerald-900 pb-12 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center">
           <div className="w-full">
             <h3 className="text-center text-2xl font-bold font-sarif">....</h3>
             <div className="container px-8 py-8 mx-auto w-full">
@@ -579,7 +579,7 @@ export default function Home() {
               </ul>
             </div>
             <a
-              className="bg-emerald-50 text-emerald-700 hover:bg-emerald-100 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
+              className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
               href="/donate"
             >
               Donate
@@ -674,9 +674,9 @@ export default function Home() {
       </div>
 
       <div>
-        <section className="text-gray-800 bg-gradient-to-r from-amber-200 to-yellow-400 font-sans font-medium">
-          <div className="container px-5 py-12 mx-auto flex flex-wrap">
-            <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 sm:w-2/3 content-start sm:pr-10">
+        <section className="text-gray-800 bg-gradient-to-bl from-yellow-300 to-sky-400 font-sans font-medium">
+          <div className="container px-5 py-12 mx-auto flex flex-col lg:flex-row">
+            <div className="flex flex-wrap -mx-4 mt-auto mb-auto lg:w-1/2 content-start sm:pr-10">
               <div className="w-full sm:p-4 px-4 mb-6">
                 <div className="leading-relaxed">
                   Give Bangladesh Foundation was established in 2018 to provide
@@ -716,7 +716,7 @@ export default function Home() {
                 <p className="leading-relaxed">Communities</p>
               </div>
             </div>
-            <div className="lg:w-1/2 sm:w-1/3 w-full grid place-content-center rounded-lg overflow-hidden mt-6 sm:mt-0">
+            <div className="lg:w-1/2 w-full grid place-content-center rounded-lg overflow-hidden mt-6 sm:mt-0">
               <Image src={GB} alt="Give Bangladesh" height={400} width={512} />
             </div>
           </div>
