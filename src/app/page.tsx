@@ -99,7 +99,7 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="py-24 w-full bg-emerald-700 p-4 lg:px-32">
+      <div className="py-24 w-full bg-emerald-700 p-4 md:px-16 lg:px-32">
         <div className="bg-white rounded-lg px-4 w-full">
           <section className="text-gray-700 font-sans">
             <div className="container px-5 py-12 mx-auto flex flex-col">
@@ -418,7 +418,7 @@ export default function Home() {
         </h2>
       </div>
       <div>
-        <section className="bg-gradient-to-r from-emerald-500 to-emerald-900 pb-12 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center">
+        <section className="bg-gradient-to-r from-emerald-500 to-emerald-900 pb-12 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center md:px-16 lg:px-32">
           <div className="w-full">
             <h3 className="text-center text-2xl font-bold font-sarif">....</h3>
             <div className="container px-8 py-8 mx-auto w-full">
