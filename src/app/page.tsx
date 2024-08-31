@@ -664,8 +664,12 @@ export default function Home() {
                 <path d="M13 19v3" />
                 <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" />
               </svg>
-              <h3 className="text-5xl font-black font-sarif">15 Taka</h3>
-              <h4 className="text-xl font-medium text-gray-700">Per Tree</h4>
+              <h3 className="text-5xl font-black font-sarif text-center">
+                15 Taka
+              </h3>
+              <h4 className="text-xl font-medium text-gray-700 text-center">
+                Per Tree
+              </h4>
             </div>
             <div>
               <a
@@ -695,8 +699,12 @@ export default function Home() {
                 <path d="m2 15 6 6" />
                 <path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z" />
               </svg>
-              <h3 className="text-5xl font-black font-sarif">30,000 Taka</h3>
-              <h4 className="text-xl font-medium text-gray-700">One Time</h4>
+              <h3 className="text-5xl font-black font-sarif text-center">
+                30,000 Taka
+              </h3>
+              <h4 className="text-xl font-medium text-gray-700 text-center">
+                One Time
+              </h4>
             </div>
             <div>
               <a
