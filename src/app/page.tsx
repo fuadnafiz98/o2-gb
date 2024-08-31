@@ -10,6 +10,8 @@ import Trees from "@/components/Trees";
 import HeroImage1 from "../assets/hero1.jpg";
 import Po2 from "../assets/po2.png";
 import { useState } from "react";
+import { Heading } from "@/components/Heading";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [toggle, setToggle] = useState(false);
@@ -113,11 +115,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="grid place-content-center h-40">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          About Project Oxygen
-        </h2>
-      </div>
+      <Heading title="About Project Oxygen" />
 
       <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="w-full font-sans text-xl md:text-3xl md:pr-12 text-justify h-full md:px-4">
@@ -138,11 +136,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid place-content-center h-40">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          Pillars of Project Oxygen
-        </h2>
-      </div>
+      <Heading title="Pillars of Project Oxygen" />
 
       <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="grid grid-cols-1 lg:grid-cols-2  h-full w-full">
@@ -199,11 +193,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid place-content-center h-40">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          Large Scale Afforestation
-        </h2>
-      </div>
+      <Heading title="Large Scale Afforestation" />
 
       <div className="py-24 w-full bg-emerald-700 p-4 md:px-16 lg:px-32">
         <div className="bg-white rounded-lg px-4 w-full">
@@ -330,11 +320,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid place-content-center h-40">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          Aftercare Monitoring Framework
-        </h2>
-      </div>
+      <Heading title="Aftercare Monitoring Framework" />
 
       <div>
         <section className="leaf-pattern flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center md:px-16 lg:px-32">
@@ -512,17 +498,8 @@ export default function Home() {
         </section>
       </div>
 
-      {/* <div className="grid place-content-center h-24">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          Partnership Dynamics
-        </h2>
-      </div> */}
+      <Heading title="Pledge to Sustainability" />
 
-      <div className="grid place-content-center h-24">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          Pledge to Sustainability
-        </h2>
-      </div>
       <div>
         <section className="bg-gradient-to-r from-emerald-500 to-emerald-900 pb-12 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center md:px-16 lg:px-32">
           <div className="w-full">
@@ -602,11 +579,7 @@ export default function Home() {
         </section>
       </div>
 
-      <div className="grid place-content-center h-24">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          Sponsorship Options
-        </h2>
-      </div>
+      <Heading title="Sponsorship Options" />
 
       <div className="font-sans font-medium min-h-[512px] grid grid-cols-1 gap-4 lg:grid-cols-2 h-full px-12 md:px-16 lg:px-32">
         <div className="bg-emerald-900 text-gray-50 px-8 py-4 rounded-lg">
@@ -719,9 +692,14 @@ export default function Home() {
       </div>
 
       <div className="grid place-content-center h-24 my-8 space-y-4">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 80 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center"
+        >
           Customize Your Donation!
-        </h2>
+        </motion.h2>
         <p className="text-lg text-center font-sans font-medium text-gray-500">
           Select the trees you want to plant and the amount you want to donate
         </p>
@@ -731,11 +709,7 @@ export default function Home() {
         <Trees />
       </div>
 
-      <div className="grid place-content-center h-24">
-        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          About Give Bangladesh
-        </h2>
-      </div>
+      <Heading title="About Give Bangladesh" />
 
       <div>
         <section className="text-gray-800 bg-gradient-to-bl from-yellow-300 to-sky-400 font-sans font-medium">
