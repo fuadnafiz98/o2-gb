@@ -1,12 +1,112 @@
+"use client";
+
 import Image from "next/image";
 import PlantImage from "../assets/plant.png";
 import NimImage from "../assets/nim.png";
 import Climate from "../assets/13.png";
 import GB from "../assets/gb.jpg";
+import HandsImg from "../assets/hands.jpg";
+import Trees from "@/components/Trees";
+import HeroImage1 from "../assets/hero1.jpg";
+import Po2 from "../assets/po2.png";
+import { useState } from "react";
 
 export default function Home() {
+  const [toggle, setToggle] = useState(false);
   return (
     <main>
+      <header className="sticky top-0 z-50 font-sans font-medium bg-white text-black shadow-lg h-20 py-4 flex justify-between">
+        <div className="flex space-x-2 px-12">
+          <button
+            onClick={() => setToggle(!toggle)}
+            className="md:hidden border border-gray-300 hover:bg-gray-400 rounded-lg px-3 grid place-content-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+          </button>
+          <a
+            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+            href="/"
+          >
+            <Image src={Po2} height={100} width={100} alt="Logo" />
+          </a>
+        </div>
+
+        <nav className="hidden md:flex md:items-center">
+          <a
+            href="/"
+            className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
+          >
+            About
+          </a>
+          <a
+            href="/"
+            className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
+          >
+            Sponsorship Options
+          </a>
+          <a
+            href="/"
+            className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
+          >
+            Custom Donation
+          </a>
+          <a
+            href="/"
+            className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
+          >
+            About Give Bangladesh
+          </a>
+        </nav>
+
+        <div className="flex justify-center items-center pr-10">
+          <button>Donate</button>
+        </div>
+        {toggle && (
+          <div className="bg-white min-h-48 mt-12 absolute w-full px-12 py-4">
+            <nav>
+              <a
+                href="/"
+                className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
+              >
+                About
+              </a>
+              <a
+                href="/"
+                className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
+              >
+                Sponsorship Options
+              </a>
+              <a
+                href="/"
+                className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
+              >
+                Custom Donation
+              </a>
+              <a
+                href="/"
+                className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
+              >
+                About Give Bangladesh
+              </a>
+            </nav>
+          </div>
+        )}
+      </header>
+
       <div className="text-2xl grid place-content-center bg-green-900 font-bold h-[400px] md:h-[600px] lg:h-[800px]">
         <h1 className="font-sarif text-4xl md:text-5xl lg:text-6xl font-black text-white">
           Project Oxygen
@@ -19,7 +119,7 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="flex flex-col-reverse items-center h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
+      <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="w-full font-sans text-xl md:text-3xl md:pr-12 text-justify h-full md:px-4">
           <strong>Shokto Kori Bangladesh</strong> - With this resolute motto,
           <strong>Project Oxygen 4.0</strong>, driven by the passion of the
@@ -27,14 +127,20 @@ export default function Home() {
           of Bangladesh’s coast, is targeting to plant <strong>200,000 </strong>
           trees in climate-vulnerable regions of Dumuria, Khulna.
         </div>
-        <div className="w-full h-full">
-          <div className="bg-emerald-900 h-full"></div>
+        <div className="w-full h-full grid place-content-center m-4">
+          <Image
+            src={HeroImage1}
+            className="max-h-[512px] rounded-lg shadow-xl drop-shadow-xl"
+            alt="Hero Image"
+            width={620}
+            height={512}
+          />
         </div>
       </div>
 
       <div className="grid place-content-center h-40">
         <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
-          4 Pillars of Project Oxygen
+          Pillars of Project Oxygen
         </h2>
       </div>
 
@@ -502,169 +608,119 @@ export default function Home() {
         </h2>
       </div>
 
-      <div className="grid place-content-center font-sans lg:mx-64 font-medium">
-        <div className="mt-12 container space-y-12 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-x-8">
-          <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
-            <div className="flex-1">
-              <p className="mt-4 flex items-baseline ">
-                <span className="text-5xl font-extrabold tracking-tight">
-                  15 BDT
-                </span>
-                <span className="ml-1 text-xl font-semibold">/each tree</span>
-              </p>
-              <p className="mt-6">Benifits</p>
-              <ul role="list" className="mt-6 space-y-6">
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">
-                    Brand Visibility in Communication Material
-                  </span>
-                </li>
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">
-                    Exclusive stand banners and backdrops featuring your company
-                    logo
-                  </span>
-                </li>
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">
-                    housands of youth volunteers wearing branded T-shirts and
-                    caps.
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <a
-              className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-              href="/donate"
-            >
-              Donate
-            </a>
-          </div>
-          <div className="relative p-8  border border-gray-200 rounded-2xl shadow-sm flex flex-col">
-            <div className="flex-1">
-              <p className="mt-4 flex items-baseline ">
-                <span className="text-5xl font-extrabold tracking-tight">
-                  30,000
-                </span>
-                <span className="ml-1 text-xl font-semibold">BDT One time</span>
-              </p>
-              <p className="mt-6">Benifits</p>
-              <ul role="list" className="mt-6 space-y-6">
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">Exclusive PR in national media</span>
-                </li>
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">
-                    Extensive coverage of your sponsorship in 10 major
-                    newspapers
-                  </span>
-                </li>
-                <li className="flex">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    className="flex-shrink-0 w-6 h-6 text-emerald-500"
-                    aria-hidden="true"
-                  >
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                  </svg>
-                  <span className="ml-3 ">
-                    Boosting your brand’s presence and reputation across
-                    widespread media platforms.
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <a
-              className="bg-emerald-500 text-white  hover:bg-emerald-600 mt-8 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium"
-              href="/donate"
-            >
-              Donate
-            </a>
+      <div className="font-sans font-medium min-h-[512px] grid grid-cols-1 gap-4 lg:grid-cols-2 h-full px-12 md:px-16 lg:px-32">
+        <div className="bg-emerald-900 text-gray-50 px-8 py-4 rounded-lg">
+          <h2 className="text-2xl lg:text-3xl font-bold my-2 font-sarif">
+            Donation Benifits
+          </h2>
+          <div className="text-lg lg:text-xl space-y-2 text-justify">
+            <p>
+              <strong className="text-emerald-200">Environmental:</strong> An
+              estimated increase in oxygen production of approximately{" "}
+              <span className="underline underline-offset-4 decoration-emerald-600 decoration-4">
+                112.65 tonnes per annum.
+              </span>{" "}
+              An estimated{" "}
+              <span className="underline underline-offset-4 decoration-emerald-600 decoration-4">
+                43.89 tons
+              </span>{" "}
+              of carbon dioxide sequestration upon maturity. Creation of
+              wildlife habitat.
+            </p>
+            <p>
+              <strong className="text-emerald-200">Disaster Prevention:</strong>{" "}
+              Addition of{" "}
+              <span className="underline underline-offset-4 decoration-emerald-600 decoration-4">
+                14.63 hectares
+              </span>{" "}
+              of new mangrove forest. Prevention of cyclones, floods and
+              landslides. Strengthened coastal protection.
+            </p>
+            <p>
+              <strong className="text-emerald-200">Economic: </strong>
+              Breakthrough development in agricultural production. Local
+              employment opportunities in various sectors including bee
+              production.
+            </p>
           </div>
         </div>
+        <div className="flex flex-col justify-around">
+          <div className="h-1/2 px-12 py-4 rounded-md hover:shadow-lg min-h-44 flex justify-between flex-col">
+            <div className="flex flex-col justify-center w-full items-center space-y-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80"
+                height="80"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="bg-emerald-100 rounded-full p-4 text-emerald-600"
+              >
+                <path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z" />
+                <path d="M7 16v6" />
+                <path d="M13 19v3" />
+                <path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5" />
+              </svg>
+              <h3 className="text-5xl font-black font-sarif">15 Taka</h3>
+              <h4 className="text-xl font-medium text-gray-700">Per Tree</h4>
+            </div>
+            <div>
+              <a
+                className="bg-emerald-500 text-white  hover:bg-emerald-600 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium h-12"
+                href="/donate"
+              >
+                Donate
+              </a>
+            </div>
+          </div>
+          <div className="h-1/2 px-12 py-4 rounded-md hover:shadow-lg min-h-44 flex justify-between flex-col">
+            <div className="flex flex-col justify-center w-full items-center space-y-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="82"
+                height="82"
+                viewBox="0 0 25 25"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="bg-emerald-100 rounded-full p-4 text-emerald-600"
+              >
+                <path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" />
+                <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />
+                <path d="m2 15 6 6" />
+                <path d="M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z" />
+              </svg>
+              <h3 className="text-5xl font-black font-sarif">30,000 Taka</h3>
+              <h4 className="text-xl font-medium text-gray-700">One Time</h4>
+            </div>
+            <div>
+              <a
+                className="bg-emerald-500 text-white  hover:bg-emerald-600 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium h-12"
+                href="/donate"
+              >
+                Donate
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="grid place-content-center h-24 my-8 space-y-4">
+        <h2 className="text-3xl md:text-4xl font-sarif font-bold text-emerald-950 text-center">
+          Customize Your Donation!
+        </h2>
+        <p className="text-lg text-center font-sans font-medium text-gray-500">
+          Select the trees you want to plant and the amount you want to donate
+        </p>
+      </div>
+
+      <div>
+        <Trees />
       </div>
 
       <div className="grid place-content-center h-24">
