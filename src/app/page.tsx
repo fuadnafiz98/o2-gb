@@ -9,6 +9,7 @@ import HandsImg from "../assets/hands.jpg";
 import Trees from "@/components/Trees";
 import HeroImage1 from "../assets/hero1.jpg";
 import Po2 from "../assets/po2.png";
+import Hero from "../assets/hero.jpeg";
 import { useState } from "react";
 import { Heading } from "@/components/Heading";
 import { motion } from "framer-motion";
@@ -109,11 +110,13 @@ export default function Home() {
         )}
       </header>
 
-      <div className="text-2xl grid place-content-center bg-green-900 font-bold h-[400px] md:h-[600px] lg:h-[800px]">
-        <h1 className="font-sarif text-4xl md:text-5xl lg:text-6xl font-black text-white">
-          Project Oxygen
-        </h1>
-      </div>
+      <Image
+        src={Hero}
+        className="inset-0 w-full h-[400px] md:h-[600px] lg:h-[800px] object-cover"
+        alt="Hero Image"
+        width={1920}
+        height={100}
+      />
 
       <Heading title="About Project Oxygen" />
 
