@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Serif_Display } from "next/font/google";
-import Hero from "../assets/hero.jpeg";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Project Oxygen",
     images: [
       {
-        url: Hero.src,
+        url: "/hero.jpeg",
         width: 1200,
         height: 630,
         alt: "Project Oxygen - Give Bangladesh",
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     description: "Join Project Oxygen in supporting Give Bangladesh.",
     images: [
       {
-        url: Hero.src,
+        url: "/hero.jpeg",
         alt: "Project Oxygen - Give Bangladesh",
       },
     ],
