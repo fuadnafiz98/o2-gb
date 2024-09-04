@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Project Oxygen",
     images: [
       {
-        url: "https://o2-mdmuhtasim-fuads-projects.vercel.app/hero.jpeg",
+        url: "https://o2-mdmuhtasim-fuads-projects.vercel.app/hero.jpg",
         width: 1200,
         height: 630,
         alt: "Project Oxygen - Give Bangladesh",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: "Join Project Oxygen in supporting Give Bangladesh.",
     images: [
       {
-        url: "https://o2-mdmuhtasim-fuads-projects.vercel.app/hero.jpeg",
+        url: "https://o2-mdmuhtasim-fuads-projects.vercel.app/hero.jpg",
         alt: "Project Oxygen - Give Bangladesh",
       },
     ],

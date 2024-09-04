@@ -9,7 +9,7 @@ import HandsImg from "../assets/hands.jpg";
 import Trees from "@/components/Trees";
 import HeroImage1 from "../assets/hero1.jpg";
 import Po2 from "../assets/po2.png";
-import Hero from "../assets/hero.jpeg";
+import Hero from "../assets/hero.jpg";
 import { useState } from "react";
 import { Heading } from "@/components/Heading";
 import { motion } from "framer-motion";
