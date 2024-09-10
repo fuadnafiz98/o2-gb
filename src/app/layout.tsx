@@ -23,9 +23,10 @@ export const metadata: Metadata = {
     description:
       "Join Project Oxygen in supporting Give Bangladesh and contribute towards a better future.",
     siteName: "Project Oxygen",
+    url: "https://oxygen.givebangladesh.com",
     images: [
       {
-        url: "https://o2-mdmuhtasim-fuads-projects.vercel.app/hero.jpg",
+        url: "https://oxygen.givebangladesh.com/hero.jpg",
         width: 1200,
         height: 630,
         alt: "Project Oxygen - Give Bangladesh",
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     description: "Join Project Oxygen in supporting Give Bangladesh.",
     images: [
       {
-        url: "https://o2-mdmuhtasim-fuads-projects.vercel.app/hero.jpg",
+        url: "https://oxygen.givebangladesh.com/hero.jpg",
         alt: "Project Oxygen - Give Bangladesh",
       },
     ],
