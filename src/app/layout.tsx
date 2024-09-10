@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Inter, Noto_Serif_Display } from "next/font/google";
 import "./globals.css";
 
@@ -57,6 +58,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${notoSerifDisplay.variable}`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
