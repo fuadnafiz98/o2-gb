@@ -738,6 +738,203 @@ export default function Home() {
         <Trees handleAddTree={handleAddTree} />
       </div>
 
+      <Heading id="faq" title="FAQ" />
+      <div className="p-8 bg-[url('https://oxygen.givebangladesh.com/plant.jpg')] bg-cover h-auto max-h-[800px] w-full">
+        <div className="font-sans relative w-full bg-white px-6 py-6 sm:mx-auto sm:max-w-2xl rounded-md sm:px-10">
+          <div className="mx-auto px-5">
+            <div className="mx-auto grid max-w-xl divide-y divide-emerald-200 text-emerald-900">
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span>What is Project Oxygen 4.0?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 text-zinc-600">
+                    Project Oxygen 4.0 is an afforestation initiative aimed at
+                    planting 200,000 trees in climate-vulnerable regions of
+                    Dumuria, Khulna. It is driven by youth and focuses on
+                    restoring Bangladesh’s coastal green landscapes as part of
+                    the “Shokto Kori Bangladesh” mission.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span>What are the main components of the project?</span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 text-zinc-600">
+                    The project has four key pillars: planting 200,000 trees,
+                    launching a Climate Graduation Program for youth engagement,
+                    involving local communities through faith leaders and
+                    full-time staff and conducting impact assessments in
+                    partnership with academia.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span>
+                      What is the significance of the aftercare monitoring
+                      framework?
+                    </span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 text-zinc-600">
+                    The aftercare monitoring framework ensures that trees are
+                    properly maintained after planting. Local students and staff
+                    monitor the trees, ensuring zero default rates through
+                    regular supervision and community involvement.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span>
+                      What has Project Oxygen achieved so far and what are its
+                      future goals?
+                    </span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 text-zinc-600">
+                    Since 2020, Project Oxygen has planted 53,600 trees in
+                    Koyra, Dumuria, and Shyamnagar. The long-term goal is to
+                    plant 1 million trees in 10 years, contributing
+                    significantly to Bangladesh’s reforestation and climate
+                    action efforts.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span>
+                      Why are we planting mangrove trees instead of normal
+                      trees?
+                    </span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 text-zinc-600">
+                    Mangrove trees are specifically suited for coastal regions
+                    like Dumuria, thriving in saline, waterlogged environments.
+                    They also excel in carbon sequestration, storing up to 3-5
+                    times more carbon than regular trees, both in their biomass
+                    and soil. This makes them vital for combating climate change
+                    while providing protection against storms and enhancing
+                    biodiversity in vulnerable areas.
+                  </p>
+                </details>
+              </div>
+              <div className="py-5">
+                <details className="group">
+                  <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <span>
+                      How will the project measure its environmental impact?
+                    </span>
+                    <span className="transition group-open:rotate-180">
+                      <svg
+                        fill="none"
+                        height="24"
+                        shape-rendering="geometricPrecision"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="1.5"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path d="M6 9l6 6 6-6"></path>
+                      </svg>
+                    </span>
+                  </summary>
+                  <p className="group-open:animate-fadeIn mt-3 text-zinc-600">
+                    The project will analyze its impact through running a
+                    post-intervention study engaging experts of relevant
+                    disciplines. Early estimates through secondary studies and
+                    literature reviews suggest an increase of 112.65 tonnes of
+                    oxygen production and 43.89 tonnes of carbon dioxide
+                    absorption annually.
+                  </p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Heading id="aboutgb" title="About Give Bangladesh" />
 
       <div>
