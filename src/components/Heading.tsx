@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-export const Heading = ({ title }: { title: string }) => {
+export const Heading = ({ title, id }: { title: string; id: string }) => {
   return (
     <motion.div
+      id={id}
+      style={{ scrollMarginTop: "12rem" }}
       className="grid place-content-center h-40"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}

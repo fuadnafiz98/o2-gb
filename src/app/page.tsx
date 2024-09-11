@@ -13,9 +13,23 @@ import Hero from "../assets/hero.jpg";
 import { useState } from "react";
 import { Heading } from "@/components/Heading";
 import { motion } from "framer-motion";
+import { trees } from "@/components/Trees";
+import Link from "next/link";
 
 export default function Home() {
   const [toggle, setToggle] = useState(false);
+  const [selectedTree, setSelectedTree] = useState<number[] | null>(null);
+
+  const handleAddTree = (id: number) => {
+    setSelectedTree((prev) => {
+      if (prev === null) {
+        return [id];
+      } else {
+        return [...prev, id];
+      }
+    });
+  };
+
   return (
     <main>
       <header className="sticky top-0 z-50 font-sans font-medium bg-white text-black shadow-lg h-20 py-4 flex justify-between">
@@ -50,25 +64,25 @@ export default function Home() {
 
         <nav className="hidden md:flex md:items-center">
           <a
-            href="/"
+            href="#about"
             className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
           >
             About
           </a>
           <a
-            href="/"
+            href="#sponsorship"
             className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
           >
             Sponsorship Options
           </a>
           <a
-            href="/"
+            href="#custom"
             className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
           >
-            Custom Donation
+            Customized Donation
           </a>
           <a
-            href="/"
+            href="#aboutgb"
             className="block hover:underline hover:decoration-2 hover:decoration-emerald-600 px-4 "
           >
             About Give Bangladesh
@@ -76,31 +90,37 @@ export default function Home() {
         </nav>
 
         <div className="flex justify-center items-center pr-10">
-          <button>Donate</button>
+          <a
+            target="_blank"
+            href="https://invoice.sslcommerz.com/invoice-form?&refer=6527983D4CE6E"
+            className="text-white bg-gradient-to-br from-emerald-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-emerald-200 dark:focus:ring-emerald-800 font-bold rounded-md text-md px-8 py-3 text-center me-2 mb-2"
+          >
+            Donate
+          </a>
         </div>
         {toggle && (
           <div className="bg-white min-h-48 mt-12 absolute w-full px-12 py-4">
             <nav>
               <a
-                href="/"
+                href="#about"
                 className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
               >
                 About
               </a>
               <a
-                href="/"
+                href="#sponsorship"
                 className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
               >
                 Sponsorship Options
               </a>
               <a
-                href="/"
+                href="#custom"
                 className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
               >
-                Custom Donation
+                Customized Donation
               </a>
               <a
-                href="/"
+                href="aboutgb"
                 className="block py-2 hover:bg-emerald-500 hover:text-white px-4 rounded-md"
               >
                 About Give Bangladesh
@@ -118,7 +138,7 @@ export default function Home() {
         height={100}
       />
 
-      <Heading title="About Project Oxygen" />
+      <Heading id="about" title="About Project Oxygen" />
 
       <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="w-full font-sans text-xl md:text-3xl md:pr-12 text-justify h-full md:px-4">
@@ -139,7 +159,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Heading title="Pillars of Project Oxygen" />
+      <Heading id="pillars" title="Pillars of Project Oxygen" />
 
       <div className="flex flex-col-reverse items-center min-h-[512px] lg:flex-row lg:justify-between mx-8 lg:mx-24 xl:mx-32">
         <div className="grid grid-cols-1 lg:grid-cols-2  h-full w-full">
@@ -196,7 +216,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Heading title="Large Scale Afforestation" />
+      <Heading id="afforestation" title="Large Scale Afforestation" />
 
       <div className="py-24 w-full bg-emerald-700 p-4 md:px-16 lg:px-32">
         <div className="bg-white rounded-lg px-4 w-full">
@@ -323,7 +343,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Heading title="Aftercare Monitoring Framework" />
+      <Heading id="aftercare" title="Aftercare Monitoring Framework" />
 
       <div>
         <section className="leaf-pattern flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center md:px-16 lg:px-32">
@@ -501,11 +521,11 @@ export default function Home() {
         </section>
       </div>
 
-      <Heading title="Pledge to Sustainability" />
+      <Heading id="sustainability" title="Pledge to Sustainability" />
 
       <div>
         <section className="bg-gradient-to-r from-emerald-500 to-emerald-900 pb-12 flex w-full flex-col lg:flex-row min-h-[512px] items-center justify-center md:px-16 lg:px-32">
-          <div className="w-full">
+          {/* <div className="w-full">
             <h3 className="text-center text-2xl font-bold font-sarif">....</h3>
             <div className="container px-8 py-8 mx-auto w-full">
               <div className="flex flex-col sm:mx-auto">
@@ -568,10 +588,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="w-full flex flex-col items-center">
-            <h3 className="text-center text-2xl font-bold font-sarif">...</h3>
+            <h3 className="text-center text-2xl font-bold font-sarif text-white my-12">
+              UN Sustainable Development Goal
+            </h3>
             <Image
               src={Climate}
               height={200}
@@ -582,14 +604,14 @@ export default function Home() {
         </section>
       </div>
 
-      <Heading title="Sponsorship Options" />
+      <Heading id="sponsorship" title="Sponsorship Options" />
 
       <div className="font-sans font-medium min-h-[512px] grid grid-cols-1 gap-4 lg:grid-cols-2 h-full px-12 md:px-16 lg:px-32">
         <div className="bg-emerald-900 text-gray-50 px-8 py-4 rounded-lg">
           <h2 className="text-2xl lg:text-3xl font-bold my-2 font-sarif">
             Donation Benifits
           </h2>
-          <div className="text-lg lg:text-xl space-y-2 text-justify">
+          <div className="text-lg lg:text-xl space-y-2 text-left">
             <p>
               <strong className="text-emerald-200">Environmental:</strong> An
               estimated increase in oxygen production of approximately{" "}
@@ -650,7 +672,8 @@ export default function Home() {
             <div>
               <a
                 className="bg-emerald-500 text-white  hover:bg-emerald-600 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium h-12"
-                href="/donate"
+                target="_blank"
+                href="https://invoice.sslcommerz.com/invoice-form?&refer=6527983D4CE6E"
               >
                 Donate
               </a>
@@ -685,7 +708,8 @@ export default function Home() {
             <div>
               <a
                 className="bg-emerald-500 text-white  hover:bg-emerald-600 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium h-12"
-                href="/donate"
+                target="_blank"
+                href="https://invoice.sslcommerz.com/invoice-form?&refer=6527983D4CE6E"
               >
                 Donate
               </a>
@@ -696,6 +720,8 @@ export default function Home() {
 
       <div className="grid place-content-center h-24 my-8 space-y-4">
         <motion.h2
+          id="custom"
+          style={{ scrollMarginTop: "12rem" }}
           initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -709,10 +735,10 @@ export default function Home() {
       </div>
 
       <div>
-        <Trees />
+        <Trees handleAddTree={handleAddTree} />
       </div>
 
-      <Heading title="About Give Bangladesh" />
+      <Heading id="aboutgb" title="About Give Bangladesh" />
 
       <div>
         <section className="text-gray-800 bg-gradient-to-bl from-yellow-300 to-sky-400 font-sans font-medium">
@@ -763,6 +789,21 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {selectedTree && (
+        <>
+          <div className="font-sans space-x-4 flex justify-center items-center footer fixed bottom-0 left-0 right-0 bg-emerald-800 text-white p-4 shadow-lg md:text-xl">
+            <p>You have selected {selectedTree.length} trees!</p>
+            <Link
+              // href="/checkout"
+              href="https://invoice.sslcommerz.com/invoice-form?&refer=6527983D4CE6E"
+              className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 block w-auto py-2 px-6 border border-transparent rounded-md text-center font-medium"
+            >
+              Proceed to Payment
+            </Link>
+          </div>
+        </>
+      )}
     </main>
   );
 }
