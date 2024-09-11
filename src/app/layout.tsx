@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 import { Inter, Noto_Serif_Display } from "next/font/google";
 import "./globals.css";
 
@@ -60,6 +62,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${notoSerifDisplay.variable}`}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
