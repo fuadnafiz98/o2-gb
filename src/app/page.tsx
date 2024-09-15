@@ -609,7 +609,7 @@ export default function Home() {
       <div className="font-sans font-medium min-h-[512px] grid grid-cols-1 gap-4 lg:grid-cols-2 h-full px-12 md:px-16 lg:px-32">
         <div className="bg-emerald-900 text-gray-50 px-8 py-4 rounded-lg">
           <h2 className="text-2xl lg:text-3xl font-bold my-2 font-sarif">
-            Donation Benifits
+            Donation Benefits
           </h2>
           <div className="text-lg lg:text-xl space-y-2 text-left">
             <p>
@@ -626,7 +626,9 @@ export default function Home() {
               wildlife habitat.
             </p>
             <p>
-              <strong className="text-emerald-200">Disaster Prevention:</strong>{" "}
+              <strong className="text-emerald-200">
+                Disaster Impact Mitigation:
+              </strong>{" "}
               Addition of{" "}
               <span className="underline underline-offset-4 decoration-emerald-600 decoration-4">
                 14.63 hectares
